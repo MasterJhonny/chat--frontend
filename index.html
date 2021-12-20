@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//192.168.1.101:3000/socket.io/socket.io.js"></script>
+    <title>Super Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/user.js"></script> 
+    <script src="./js/login.js"></script>
+</head>
+<body>
+    <section class="contac">
+        <header class="contac__header">
+            <div class="user">
+                <picture class="chat__user--icon" id="userAvatar">
+                    <!-- render user -->
+                </picture>
+                <p id="nameUser"></p>
+                <div class="user__barra">
+                    <div class="user__barra--option">
+                        <img src="https://www.svgrepo.com/show/209125/chat-speech-bubble.svg" alt="chat">
+                    </div>
+                    <div class="user__barra--option">
+                        <img src="https://www.svgrepo.com/show/18123/menu.svg" alt="chat">
+                    </div>
+                </div>
+            </div>   
+        </header>
+        <main class="main">
+            <section class="main__search">
+                <div class="search__input">
+                    <button class="search__input--btn" id="btnBuscar"></button>
+                    <input type="text" class="search__input--input" placeholder="Search..." autocomplete="off" id="buscar">
+                </div>
+            </section>
+            <section class="main__chats">
+                <!-- users chats -->
+            </section>
+        </main>
+    </section>
+    <section class="description">
+        <header class="description__barra">
+            <div class="user">
+                <div class="user__barra--option option__volver">
+                    <img src="https://www.svgrepo.com/show/256984/left-arrow-back.svg" alt="chat">
+                </div>
+                <div class="user__chat">
+                    <picture class="chat__user--icon" id="viewUser">
+                        <!-- render user view -->
+                    </picture>
+                    <p id="viewUserName"></p>
+                </div>
+                <div class="user__barra">
+                    <div class="user__barra--option">
+                        <img src="https://www.svgrepo.com/show/194117/search.svg" alt="lupa">
+                    </div>
+                    <div class="user__barra--option">
+                        <img src="https://www.svgrepo.com/show/18123/menu.svg" alt="chat">
+                    </div>
+                </div>
+            </div>   
+        </header>
+        <main class="main__messages">
+            <section class="salida" id="salida"></section>
+            <emoji-picker class="dark container__emogis" id="emojis"></emoji-picker>
+        </main>
+        <footer class="description__barra">
+            <div class="user">
+                <div class="user__barra">
+                    <div class="user__barra--option option--media btn__emoji" id="btnEmoji">
+                        <!-- <img src="https://res.cloudinary.com/dkhktyqd3/image/upload/v1638946898/carita_mjmlcl.svg" alt="lupa"> -->
+                    </div>
+                    <div class="user__barra--option option--media">
+                        <img src="https://www.svgrepo.com/show/130340/clip.svg" alt="chat">
+                    </div>
+                </div>
+                <div class="input__chat">
+                    <div class="user__barra--input">
+                        <div class="search__input">
+                            <form action="#" id="send">
+                                <input type="text" class="search__input--input input--send" placeholder="Message" autocomplete="off" id="message">
+                            </form>
+                        </div>
+                        <button class="search__input--btn btn--send" id="btn"></button>
+                    </div>
+                    <div class="user__barra--option" id="micro">
+                        <img src="https://www.svgrepo.com/show/18123/menu.svg" alt="chat">
+                    </div>
+                </div>
+            </div>   
+        </footer>
+        <span class="description--after">SuperChat</span>
+    </section>
+    <audio src="./audio/tono.mp3"></audio>
+    <!-- scripts libs -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+    <!-- scripts local -->
+    <script src="./js/emojis.js"></script>
+    <script src="./js/colores.js"></script>
+    <script src="./js/chat.js" ></script>
+    <script src="./js/message.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contac {
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    max-width: 550px;
+    width: 30%;
+    height: 100%;
+    background-color: #161853;
+}
+
+.contac__header, .description__barra{
+    width: 100%;
+    height: 10vh;
+}
+.user {
+    height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+.contac .user__icon img {
+    border-radius: 50%;
+}
+.user__chat {
+    display: flex;
+    align-items: center;
+}
+.user__barra {
+    display: flex;
+    flex-direction: row;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #161853;
+    position: relative;
+}
+.description--after {
+    display: block;
+    box-sizing: border-box;
+    content: 'SuperChat';
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50%;
+    background: #161853;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.user__icon img {
+    border-radius: 50%;
+}
+.user__barra {
+    display: flex;
+    flex-direction: row;
+}
+.user__barra--option {
+    width: 40px;
+    margin-left: 15px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.option__volver {
+    display: none;
+}
+
+.main__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    border-top: 1px solid #577BC1;
+}
+.search__input {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    background-color: #292C6D;
+    border-radius: 50px;
+}
+.search__input--btn {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background-color: transparent;
+    background-image: url(https://www.svgrepo.com/show/79748/search.svg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    cursor: pointer;
+}
+
+.btn--send {
+    display: none;
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    background-image: url(https://www.svgrepo.com/show/193378/send.svg);
+}
+
+.search__input--input {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border: 0;
+}
+
+.input--send {
+    font-size: 22px;
+    height: 60px;
+    padding: 5px 20px;
+}
+/* estilos de los contactos */
+.main__chats {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+
+.chat__user {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #456cbb;
+    align-items: center;
+    
+    cursor: pointer;
+    color: #fff;
+}
+.chat__user--name {
+    display: flex;
+}
+.chat__user--name p {
+    margin-left: 25px;
+}
+
+.status--user {
+    font-size: 14px;
+    color: #FFE300;
+}
+
+.chat__user--icon {
+    width: 50px;
+    height: 50px;
+    background-color: #2C272E;
+    border-radius: 50%;
+    border: 2px solid #FFC286;
+}
+.user__icon--init {
+    text-align: center;
+    line-height: 48px;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.chat__user--notify {
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-color: #FFE300;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 10px;
+    color:#161853;
+    font-weight: 600;
+}
+
+
+.main__messages {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-image: url(https://as01.epimg.net/meristation/imagenes/2019/11/11/betech/1573497171_487815_1573497337_sumario_normal.jpg); */
+    /* background-image: url(https://www.todofondos.net/wp-content/uploads/descargar-fondo-de-whatsapp-music-576x1024.jpg); */
+    
+
+}
+/* estilo del input de chat */
+.input__chat {
+    flex: 1 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.user__barra--input {
+    width: 100%;
+    margin-left: 15px;
+    display: flex;
+}
+#micro {
+    margin: 0;
+}
+
+/* estilos de los mesages */
+.salida {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 20px;
+    background-image: url(https://www.todofondos.net/wp-content/uploads/descargar-fondo-de-whatsapp-music-576x1024.jpg);
+    opacity: 0.7;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: scroll;
+    scroll-behavior: scroll;
+}
+.box__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    min-width: 150px;
+    height: auto;
+    background-color: #2E4C6D;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    color: #fff;
+}
+
+.box__right {
+    justify-content: flex-end;
+}
+.name {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 500;
+    color: #96C7C1;
+}
+.message {
+    text-align: left;
+    font-size: 20px;
+}
+
+/* estylos Emoji */
+.container__emogis {
+    width: 100%;
+    height: 300px;
+    display: none;
+    --num-columns: 10;
+    --emoji-size: 1.9rem;
+    --background: #161853;
+}
+
+.btn__emoji {
+    background-image: url(https://res.cloudinary.com/dkhktyqd3/image/upload/v1638946898/carita_mjmlcl.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* class general */
+.view {
+    display: flex;
+}
+
+@media (max-width: 550px) {
+    body {
+        width: 100%;
+    }
+    .contac {
+        width: 100%;
+    }
+    .description {
+        width: 100%;
+        display: none;
+    }
+    .option__volver {
+        display: block;
+    }
+    .box {
+        min-width: none;
+        max-width: 280px;
+        margin: 7px;
+        min-width: 120px;
+    }
+    .name {
+        font-size: 15px;
+    }
+    .message {
+        font-size: 14px;
+    }
+    .salida {
+        padding: 0 10px;
+        scroll-behavior: scroll;
+        
+    }
+    .input--send {
+        width: 100%;
+        font-size: 16px;
+        height: 40px;
+        padding: 0 15px;
+    }
+    .btn--send {
+        display: none;
+        width: 40px;
+        height: 40px;
+    }
+    .option--media {
+        width: 20px;
+        height: 20px;
+        margin-left: 7px;
+    }
+    .option--media img {
+        width: 100%;
+        object-fit: contain;
+    }
+    /* estylos Emoji */
+    .container__emogis {
+        height: 290px;
+        --num-columns: 8;
+        --emoji-size: 1.4rem;
+        --background: #161853;
+    }
+}
