@@ -1,13 +1,13 @@
 class Message {
     constructor(user, idChat, destUserId) {
-        this.url = 'http://192.168.1.101:3000/api/v1/messages/'
+        this.url = 'https://agile-shelf-79558.herokuapp.com/v1/messages'
         this.user = user;
         this.idChat = idChat;
         this.destUserId = destUserId;
     }
     async newMessage (message) {
         try {
-            const response = await fetch("http://192.168.1.101:3000/api/v1/messages", {
+            const response = await fetch(this.url, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json;charset=utf-8",

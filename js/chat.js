@@ -1,6 +1,6 @@
 class Chat {
   constructor(user) {
-    this.url = "http://192.168.1.101:3000/api/v1/chats";
+    this.url = "https://agile-shelf-79558.herokuapp.com/api/v1/chats";
     this.user = user;
   }
 

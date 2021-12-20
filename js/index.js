@@ -42,7 +42,7 @@ const emojis = new Emoji(cajaEmojis, btnEmoji, msg);
 
 async function getMessage (id) {
   try {
-    const response = await fetch(`http://192.168.1.101:3000/api/v1/messages?chat=${id}`);
+    const response = await fetch(`https://agile-shelf-79558.herokuapp.com/api/v1/messages?chat=${id}`);
     const data = await response.json();
     return data;
   } catch (error) {
@@ -194,7 +194,7 @@ function addMessage () {
 }
 
 // se hace al conection de web sockets
-let socket = io.connect("http://192.168.1.101:3000", {
+let socket = io.connect("https://agile-shelf-79558.herokuapp.com", {
   forceNew: true,
 });
 

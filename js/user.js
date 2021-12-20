@@ -1,6 +1,6 @@
 class User {
   constructor() {
-    this.url = "http://192.168.1.101:3000/api/v1/users";
+    this.url = "https://agile-shelf-79558.herokuapp.com/api/v1/users";
     this.data = JSON.parse(localStorage.getItem("user"));
   }
 
