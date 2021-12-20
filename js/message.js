@@ -1,6 +1,6 @@
 class Message {
     constructor(user, idChat, destUserId) {
-        this.url = 'https://agile-shelf-79558.herokuapp.com/v1/messages'
+        this.url = 'https://agile-shelf-79558.herokuapp.com/api/v1/messages'
         this.user = user;
         this.idChat = idChat;
         this.destUserId = destUserId;
